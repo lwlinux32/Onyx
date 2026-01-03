@@ -13,12 +13,8 @@ An AI that doesnt need any API's or any reverse engineering but has no limits ma
 - **🛠️ Configurable**: Adjustable temperature, max tokens, and model settings.
 - **⚙️ Offline working**: When you download the model, you dont need any wifi to chat.
 ## Getting Ready
- 1. **Now before anything, add a "Onyx" file(or whichever name you want) to put everything on.**
-    ```bash
-    mkdir Onyx
-    cd Onyx
-    ```
-2. **Requirements**
+
+1. **Requirements**
 - Python 3.8+ installed and the libraries gpt4all, rich, pyyaml and requests 
 - 4GB+ RAM (8GB+ recommended for better models)
 - Internet connection (initial model download only)
