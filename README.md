@@ -11,14 +11,17 @@ An AI that doesnt need any API's or any reverse engineering but has no limits ma
 - **🎭 Personality System**: Switch between different personalities like "Super Coder", "CLI Expert", or create your own.
 - **⚙️ Dynamic Engine Switching**: View available local models and their RAM usage, and switch engines on the fly.
 - **🛠️ Configurable**: Adjustable temperature, max tokens, and model settings.
-
+- **⚙️ Offline working**: When you download the model, you dont need any wifi to chat.
 ## Getting Ready
-    Now before anything, add a "Onyx" file to put everything on.
+ 1. **Now before anything, add a "Onyx" file to put everything on.**
     ```bash
     mkdir Onyx
     ```
-1. **Requirements**
-    Python 3.x installed and the libraries gpt4all, rich, pyyaml and requests
+2. **Requirements**
+- Python 3.8+ installed and the libraries gpt4all, rich, pyyaml and requests 
+- 4GB+ RAM (8GB+ recommended for better models)
+- Internet connection (initial model download only)
+- Libraries gpt4all, rich, pyyaml and requests  
    If they are ready, then you're good to go!
 ## Installation
 
@@ -71,11 +74,9 @@ python main.py
 4.  **Change AI Engine**: View detailed list of available GPT4All models (with RAM usage) and switch the active engine.
 5.  **Exit**: Close the application.
 
-## Requirements
 
-- Python 3.8+
-- 4GB+ RAM (8GB+ recommended for better models)
-- Internet connection (initial model download only)
+
+
 
 ## License
 
