@@ -1,18 +1,25 @@
 # Onyx
 
-A sleek, local, and powerful AI terminal interface. Built with Python, Rich, and GPT4All.
+An AI that doesnt need any API's or any reverse engineering but has no limits made with GPT4All.
 
-![Onyx](https://img.shields.io/badge/Status-Active-success)
-![Python](https://img.shields.io/badge/Python-3.14-blue)
+
 
 ## Features
 
 - **🚀 Local AI Power**: Runs locally using GPT4All models. No API keys or internet required after model download.
 - **💎 Sleek UI**: Beautiful Rich terminal interface with Onyx-themed dark aesthetics.
-- **🎭 Persona System**: Switch between different personalities like "Super Coder", "CLI Expert", or create your own.
+- **🎭 Personality System**: Switch between different personalities like "Super Coder", "CLI Expert", or create your own.
 - **⚙️ Dynamic Engine Switching**: View available local models and their RAM usage, and switch engines on the fly.
 - **🛠️ Configurable**: Adjustable temperature, max tokens, and model settings.
 
+## Getting Ready
+    Now before anything, add a "Onyx" file to put everything on.
+    ```bash
+    mkdir Onyx
+    ```
+1. **Requirements**
+    Python 3.x installed and the libraries gpt4all, rich, pyyaml and requests
+   If they are ready, then you're good to go!
 ## Installation
 
 1.  **Clone the repository**
@@ -21,7 +28,7 @@ A sleek, local, and powerful AI terminal interface. Built with Python, Rich, and
     cd Onyx
     ```
 
-2.  **Install Dependencies**
+3.  **Install Dependencies**
     ```bash
     pip install -r requirements.txt
     ```
