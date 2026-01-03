@@ -25,14 +25,22 @@ class ModelEngine:
             return True # Already loaded
             
         print(f"Loading model: {name_to_load}...")
+        
+        # Check if model exists locally
+        full_path = os.path.join(model_path, name_to_load)
+        exists_locally = os.path.exists(full_path)
+        
+        if exists_locally:
+             # Force offline mode if we have it
+             print(f"Found local copy at {full_path}. Loading offline...")
+             allow_download = False
+        else:
+             print(f"Model not found at {full_path}. Attempting download...")
+             allow_download = True
+
         try:
-            # GPT4All will check the path. If allow_download=True, it downloads to 
-            # the default cache unless we specify model_path/allow_download carefully.
-            # We want to force it to use our local models dir if possible, 
-            # or rely on its default behavior but pointing to our dir.
-            
-            # Note: GPT4All constructor model_path arg sets where to LOOK for models
-            self.model = GPT4All(model_name=name_to_load, model_path=model_path, allow_download=True)
+            # GPT4All constructor model_path arg sets where to LOOK for models
+            self.model = GPT4All(model_name=name_to_load, model_path=model_path, allow_download=allow_download)
             self.current_model_name = name_to_load
             
             # Update config if we requested a specific swap
@@ -42,6 +50,16 @@ class ModelEngine:
             return True
         except Exception as e:
             print(f"Error loading model {name_to_load}: {e}")
+            if allow_download:
+                print("Retrying in offline mode in case of network error...")
+                try:
+                    self.model = GPT4All(model_name=name_to_load, model_path=model_path, allow_download=False)
+                    self.current_model_name = name_to_load
+                    if model_name:
+                        self.config.update(model_name=model_name)
+                    return True
+                except Exception as e2:
+                    print(f"Offline retry failed: {e2}")
             return False
 
     def generate_response(self, user_input: str, persona_name: str = None, stream: bool = True):
