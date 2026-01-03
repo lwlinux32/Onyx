@@ -1,9 +1,9 @@
-# Onyx �
+# Onyx
 
 A sleek, local, and powerful AI terminal interface. Built with Python, Rich, and GPT4All.
 
 ![Onyx](https://img.shields.io/badge/Status-Active-success)
-![Python](https://img.shields.io/badge/Python-3.12-blue)
+![Python](https://img.shields.io/badge/Python-3.14-blue)
 
 ## Features
 
