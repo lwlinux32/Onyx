@@ -32,7 +32,7 @@ An AI that doesnt need any API's or any reverse engineering but has no limits ma
     ```bash
     pip install -r requirements.txt
     ```
-    # Note: "Externally managed enviroment"(PEP 6xx) or the "HINT:this package was installed by debian." errors solved(if needed)
+    ### Note: "Externally managed enviroment"(PEP 6xx) or the "HINT:this package was installed by debian." errors solved(if needed)
      ** pip has a LOT of errors in linux so,the solvings for the install are followed by: **  
    
     # Breaking the system packages
