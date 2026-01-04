@@ -35,12 +35,12 @@ An AI that doesnt need any API's or any reverse engineering but has no limits ma
     ### Note: "Externally managed enviroment"(PEP 6xx) or the "HINT:this package was installed by debian." errors solved(if needed)
      ** pip has a LOT of errors in linux so,the solvings for the install are followed by: **  
    
-    # Breaking the system packages
+    #### Breaking the system packages
  by using the   ```--break-system-packages ``` and   ```--ignore-installed ``` your errors will be gone! But, breaking the system packages can make other errors so it is NOT recommended. The command will be:
     ```bash
      pip install requirements.txt -r --break-system-packages --ignore-installed
     ```
-# Create a Virtual Environment (recommended) 
+#### Create a Virtual Environment (recommended) 
       
     *Debian/Ubuntu/Arch/Fedora:*
     ```bash
